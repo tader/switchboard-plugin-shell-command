@@ -2,7 +2,7 @@
   "id": "shell-command",
   "name": "Shell command",
   "version": "1.0.0",
-  "description": "Run a fixed shell command through a connection on a satellite.",
+  "description": "Run a fixed shell command through a connection on a peer.",
   "icon": "icon.svg",
   "settings": [
     {
@@ -10,7 +10,7 @@
       "label": "Allow shell commands",
       "type": "boolean",
       "default": false,
-      "description": "Anyone allowed to use this satellite can create commands with the Switchboard process's filesystem permissions."
+      "description": "Local users can create fixed commands with the Switchboard process's filesystem permissions."
     }
   ]
 }

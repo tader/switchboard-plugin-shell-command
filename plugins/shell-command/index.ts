@@ -8,7 +8,7 @@ const MAX_OUTPUT = 1024 * 1024;
 
 export default async function setup(ctx: PluginContext) {
   // A central instance must never turn this into remote command execution on itself.
-  if (!ctx.satellite) return {};
+  if (!ctx.peer) return {};
 
   const pending = new Map<string, { command: string; expires: number }>();
   const server = http.createServer((request, response) => {
@@ -52,7 +52,7 @@ export default async function setup(ctx: PluginContext) {
     services: [{
       id: 'shell-command',
       name: 'Shell command',
-      description: 'Run a fixed command on this satellite and return its standard output',
+      description: 'Run a fixed command on this peer and return its standard output',
       icon: 'icon.svg',
       baseUrl,
       allowedHosts: [new URL(baseUrl).host],
@@ -60,7 +60,7 @@ export default async function setup(ctx: PluginContext) {
         id: 'command',
         name: 'Command',
         description: 'The same command runs on every call. Request input is not inserted into it.',
-        unavailable: ctx.settings.enabled ? undefined : 'A satellite administrator must enable shell commands in the plugin settings',
+        unavailable: ctx.settings.enabled ? undefined : 'A peer administrator must enable shell commands in the plugin settings',
         fields: [{
           key: 'command',
           label: 'Shell command',
