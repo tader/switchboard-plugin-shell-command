@@ -1,6 +1,6 @@
 # Shell command
 
-Run a fixed shell command through a connection on a peer.
+Run a fixed shell command through a connection on any Switchboard instance.
 
 Maintained independently from [Switchboard](https://github.com/tader/switchboard).
 
@@ -14,7 +14,7 @@ Dependencies: None. Missing external dependencies are resolved through the live 
 
 Install this repository before upgrading a Switchboard instance that bundles `shell-command`. The plugin ID, service IDs, authentication methods, settings and persistent data paths are preserved. Installed plugins replace the built-in copy. Existing connections and saved calls continue to work; keep the instance data directory and encryption key.
 
-This plugin runs on a peer. After installing it on that machine, enable **Allow shell commands** in its local plugin settings.
+No peer connection is required. After installing it, enable **Allow shell commands** in its local plugin settings.
 
 ## Setup guides
 
