@@ -1,7 +1,7 @@
 {
   "id": "shell-command",
   "name": "Shell command",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Run a fixed shell command through a connection on this machine.",
   "icon": "icon.svg",
   "settings": [
